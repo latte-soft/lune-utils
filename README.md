@@ -52,7 +52,7 @@ You must define a reference to `lune-utils` to utilize its members, like so:
 local LuneUtils = require("lune-utils")
 ```
 
-With that, you can index any module from this repo's [utils](utils) directory; for example:
+With that, you can index any module from this repo's [lib](lib) directory; for example:
 
 ```lua
 print(LuneUtils.StringUtils.DirectoryOfFilePath("path/to/file.txt"))
