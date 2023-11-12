@@ -50,6 +50,19 @@ function StringUtils.DirectoryOfFilePath(filePath: string): string?
     return Directory
 end
 
+function StringUtils.SplitStringByPattern(originalString: string, pattern: string)
+    local SplitArray = {}
+    for Match in string.gmatch(originalString, pattern) do
+        table.insert(SplitArray, Match)
+    end
+
+    return SplitArray
+end
+
+function StringUtils.SplitFilePath(filePath: string)
+    return StringUtils.SplitStringByPattern(filePath, "([^/\\]+)[/\\]?")
+end
+
 function StringUtils.LineCount(input: string): number
     local Lines = 1
     for _ in string.gmatch(input, "\n") do
