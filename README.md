@@ -11,7 +11,7 @@ Common Universal Utility Modules Made for Our [Lune](https://github.com/filiptib
     1. Add a submodule in *your* repository pointing to *this* repository, to a specifed directory (replace `path/to/chosen/directory/lune-utils`):
 
         ```
-        git submodule add https://git-scm.com/book/en/v2/Git-Tools-Submodules path/to/chosen/directory
+        git submodule add https://github.com/latte-soft/lune-utils.git path/to/chosen/directory
         ```
 
     2. For updating your repository's submodule(s), including said `path/to/chosen/directory/lune-utils` (Being the submodule):
