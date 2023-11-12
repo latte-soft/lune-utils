@@ -9,4 +9,5 @@ return {
     Run = require("Run"),
     ParseArgs = require("ParseArgs"),
     EnsureFileTree = require("EnsureFileTree"),
+    RecursiveReadDir = require("RecursiveReadDir"),
 }
