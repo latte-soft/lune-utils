@@ -10,21 +10,21 @@ Common Universal Utility Modules Made for Our [Lune](https://github.com/filiptib
 
     1. Add a submodule in *your* repository pointing to *this* repository, to a specifed directory (replace `path/to/chosen/directory/lune-utils`):
 
-    ```
-    git submodule add https://git-scm.com/book/en/v2/Git-Tools-Submodules path/to/chosen/directory
-    ```
+        ```
+        git submodule add https://git-scm.com/book/en/v2/Git-Tools-Submodules path/to/chosen/directory
+        ```
 
     2. For updating your repository's submodule(s), including said `path/to/chosen/directory/lune-utils` (Being the submodule):
 
-    ```
-    git submodule update --remote path/to/chosen/directory/lune-utils
-    ```
+        ```
+        git submodule update --remote path/to/chosen/directory/lune-utils
+        ```
 
     3. From a Lune script, you can now just `require()` the directory directly due to the precense of `init.luau`:
 
-    ```lua
-    local LuneUtils = require("path/to/chosen/directory/lune-utils")
-    ```
+        ```lua
+        local LuneUtils = require("path/to/chosen/directory/lune-utils")
+        ```
 
 * Downloading the Repository's `zip` Archive Manually:
 
@@ -40,9 +40,9 @@ Common Universal Utility Modules Made for Our [Lune](https://github.com/filiptib
 
     2. `require()` the script in the exact same way, just instead of a directory:
 
-    ```lua
-    local LuneUtils = require("lune-utils")
-    ```
+        ```lua
+        local LuneUtils = require("lune-utils")
+        ```
 
 ## Usage
 
