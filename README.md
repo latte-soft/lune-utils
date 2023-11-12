@@ -1,6 +1,6 @@
 # Lune Utils
 
-Common Universal Utility Modules Made for Our [Lune](https://github.com/filiptibell/lune) Projects
+Common Universal Utility Modules Made for Our Projects Using [Lune](https://github.com/filiptibell/lune)
 
 *This was made soley to better centralize these common utilities for the scale of multiple different projects*
 
