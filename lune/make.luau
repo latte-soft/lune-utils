@@ -5,7 +5,7 @@ local StringUtils = require("../lib/StringUtils")
 local Run = require("../lib/Run")
 
 local DebugOutputPath = "build/lune-utils.luau"
---local MinOutputPath = "build/lune-utils.min.luau"
+local MinOutputPath = "build/lune-utils.min.luau"
 
 local Version = fs.readFile("version.txt")
 
@@ -34,4 +34,5 @@ fs.copy("LICENSE", "build/LICENSE")
 Run(`lune wax bundle output={DebugOutputPath} extra-offset-lines={CodegenHeaderLineOffset} ci-mode=true`)
 fs.writeFile(DebugOutputPath, CodegenHeader .. fs.readFile(DebugOutputPath))
 
--- Not building build/lune-utils.min.luau for now until Darklua supports str interpolation
+Run(`lune wax bundle output={MinOutputPath} extra-offset-lines={CodegenHeaderLineOffset} ci-mode=true minify=true`)
+fs.writeFile(MinOutputPath, CodegenHeader .. fs.readFile(MinOutputPath))
