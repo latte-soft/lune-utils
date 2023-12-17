@@ -72,6 +72,27 @@ function StringUtils.LineCount(input: string): number
     return Lines
 end
 
+--[[
+    This is **only** relative to the input path itself, and the result *can* be
+    negative for traversals up
+]]
+function StringUtils.NestedDirsInPath(path: string): number
+    local Result = 0
+    for Match in string.gmatch(path, "^.+[/\\]") do
+        if Match == "./" then
+            continue
+        end
+
+        if Match == "../" then
+            Result -= 1
+        end
+
+        Result += 1
+    end
+
+    return Result
+end
+
 function StringUtils.Replace(inputString: string, replacements: {[string]: string}): string
     return string.gsub(inputString, "${([A-Za-z_][A-Za-z0-9_]*)}", replacements)
 end
