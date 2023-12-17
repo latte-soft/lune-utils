@@ -29,7 +29,6 @@ end
 local CodegenHeaderLineOffset = StringUtils.LineCount(CodegenHeader) - 1
 
 fs.writeDir("build")
-fs.copy("LICENSE", "build/LICENSE")
 
 Run(`lune wax bundle output={DebugOutputPath} extra-offset-lines={CodegenHeaderLineOffset} ci-mode=true`)
 fs.writeFile(DebugOutputPath, CodegenHeader .. fs.readFile(DebugOutputPath))
