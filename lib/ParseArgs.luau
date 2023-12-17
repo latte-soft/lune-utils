@@ -7,6 +7,21 @@ local process = require("@lune/process")
 
 local Log = require("Log")
 
+--[[
+    Example usage:
+
+    ```lua
+    ...
+
+    local HELP_PROMPT = "USAGE: lune some-script [options]"
+
+    local Options = ParseArgs(process.args, {
+        ["some-option"] = {"string", "Default value"},
+        ["some-required-option"] = {"boolean", nil, true},
+        ["some-number"] = {"number", 29},
+    }, HELP_PROMPT)
+    ```
+]]
 local function ParseArgs(args: {string}, optionsTable: OptionsInput, usageMessage: string?): OptionsOutput
     local function ErrorExit()
         if usageMessage then
