@@ -42,7 +42,7 @@ function StringUtils.FilePathWithoutExtension(filePath: string, onlyTheLastDot: 
 end
 
 function StringUtils.DirectoryOfFilePath(filePath: string): string?
-    local Directory = string.match(filePath, "^.+[/\\]")
+    local Directory = string.match(filePath, "^.[/\\]")
     if not Directory then
         Directory = ""
     end
