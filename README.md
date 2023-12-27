@@ -2,13 +2,13 @@
 
 Common Universal Utility Modules Made for Our Projects Using [Lune](https://github.com/filiptibell/lune)
 
-*This was made soley to better centralize these common utilities for the scale of multiple different projects*
+*This was made solely to better centralize these common utilities for the scale of multiple different projects*
 
 ## Installation
 
 * Via a Git [Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
-    1. Add a submodule in *your* repository pointing to *this* repository, to a specifed directory (replace `path/to/chosen/directory/lune-utils`):
+    1. Add a submodule in *your* repository pointing to *this* repository, to a specified directory (replace `path/to/chosen/directory/lune-utils`):
 
         ```
         git submodule add https://github.com/latte-soft/lune-utils.git path/to/chosen/directory
@@ -20,7 +20,7 @@ Common Universal Utility Modules Made for Our Projects Using [Lune](https://gith
         git submodule update --remote path/to/chosen/directory/lune-utils
         ```
 
-    3. From a Lune script, you can now just `require()` the directory directly due to the precense of `init.luau`:
+    3. From a Lune script, you can now just `require()` the directory directly due to the presence of `init.luau`:
 
         ```lua
         local LuneUtils = require("path/to/chosen/directory/lune-utils")
